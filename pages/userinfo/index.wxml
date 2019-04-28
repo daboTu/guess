@@ -1,0 +1,27 @@
+<view class='info'>
+  <view class='h'>
+    <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
+  </view>
+  <view class='name'>
+    <open-data class="open-data-userNickName line1" type="userNickName" lang="zh_CN"></open-data>
+  </view>
+</view>
+
+<view class='list' catchtap='tobill'>
+  <view class='icon'>
+    <text class='fa fa-file-text' aria-hidden="true"></text>
+  </view>
+  <view class='text'>积分账单</view>
+  <view class='right'>
+    <text class='fa fa-angle-right' aria-hidden="true"></text>
+  </view>
+</view>
+<view class='list' catchtap='toexchange'>
+  <view class='icon'>
+    <text class='fa fa-yelp' aria-hidden="true"></text>
+  </view>
+  <view class='text'>兑换记录</view>
+  <view class='right'>
+    <text class='fa fa-angle-right' aria-hidden="true"></text>
+  </view>
+</view>

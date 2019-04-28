@@ -1,0 +1,22 @@
+/* pages/index/Modular/index.wxss */
+/* 轮播里面的 */
+.Cardsbox{
+  font-size: 28rpx;
+  padding: 24rpx 24rpx;
+  display: flex;
+}
+.Cardsbox .lbox{
+  flex: 1
+}
+.Cardsbox .rbox{
+  flex: 1;
+  text-align: right;
+}
+.titmess{
+  padding: 12rpx 24rpx;
+  font-size: 32rpx;
+}
+.num{
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}

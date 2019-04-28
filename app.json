@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gift/index",
+    "pages/authorization/index",
+    "pages/giftinfo/index",
+    "pages/userinfo/index",
+    "pages/exchange/index",
+    "pages/bill/index"
+  ],
+  "usingComponents": {
+    "shares": "pages/index/shares/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6a69f",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  }
+}

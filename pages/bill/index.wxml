@@ -1,0 +1,12 @@
+<view class='list' catchtap='toexchange'>
+  <view class='icon'>
+    <text class='fa fa-yelp' aria-hidden="true"></text>
+  </view>
+  <view class='text'>
+    <view>商品兑换</view>
+    <view class='time'>2019-04-12 12:12</view>
+  </view>
+  <view class='right'>
+    -2000
+  </view>
+</view>

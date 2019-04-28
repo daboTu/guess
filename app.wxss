@@ -1,0 +1,42 @@
+/**app.wxss**/
+@import './css/font-awesome.min.wxss';
+@import './css/stylesheet.wxss';
+page {
+  min-height: 100%;
+  background: #f8f8f8;
+  /* background: linear-gradient(to top, #fdffdf 0%, #f3d7b5 100%); */
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.btn {
+  width: 560rpx;
+  margin: 0 auto;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #282832;
+  border-radius: 5px;
+  font-size: 32rpx;
+}
+
+.xiayibu {
+  height: 30rpx;
+  width: 16rpx;
+}
+
+.color {
+  color: #f97d81;
+}

@@ -1,0 +1,64 @@
+/* pages/gift/index.wxml.wxss */
+
+.box {
+  background: #fcfcfc;
+  justify-content:space-between;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap:wrap;
+  padding:24rpx;
+}
+.chlid{
+  background:#fff;
+  height: 650rpx;
+  width: 48%;
+  margin-bottom: 24rpx;
+  border-radius: 10rpx;
+  align-self:stretch  ;
+  box-shadow: 0px 1px 3px #eee;
+}
+.img{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+  overflow: hidden;
+}
+.img image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 345rpx;
+  width: 345rpx;
+}
+.title{
+  font-size: 30rpx;
+  padding: 24rpx;
+  font-weight: 600;
+}
+.num{
+  font-size: 28rpx;
+  padding:0 24rpx;
+  color: #666;
+  margin-bottom: 24rpx;
+}
+.number{
+  color: #f6a69f;
+  font-weight: 600;
+}
+.integral{
+  display: flex;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}
+.dh{
+  font-size: 28rpx;
+  padding: 0rpx 12rpx;
+  border: none;
+  background-color: #f6a69f;
+  color: #fff;
+}
+.jf{
+  line-height: 74rpx;
+  flex: 1;
+}

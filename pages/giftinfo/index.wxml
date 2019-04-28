@@ -1,0 +1,37 @@
+<view class='box'>
+  <view class='chlid'>
+    <view class='img'>
+      <image src='../../images/lip.jpg'></image>
+    </view>
+    <view class='title'>
+     <text class='titleicon fa fa-gift' aria-hidden="true"></text> 会议小礼品活动赠品</view>
+    <!-- <view class='num'>兑换次数
+      <text class='number'>123</text> 次
+    </view> -->
+    <view class='integral'>
+      <view class='num jf'>兑换次数
+        <text class='number'>123</text> 次
+      </view>
+      <text class='number dh'>3000 </text> 积分</view>
+    <!-- <button class='dh'>兑换</button> -->
+  </view>
+
+  <view class='addr'>
+    <view class='addrTitle fa fa-map-marker' aria-hidden="true"> 收货地址</view>
+    <view class='inputbox'>
+      <text class='lable fa fa-user-circle-o' aria-hidden="true"></text>
+      <input class='input' placeholder="收件人姓名" auto-focus />
+    </view>
+    <view class='inputbox'>
+      <text class='lable fa fa-volume-control-phone' aria-hidden="true"></text>
+      <input class='input' placeholder="联系电话" auto-focus />
+    </view>
+    <view class='inputbox'>
+      <text class='lable fa fa-paper-plane' aria-hidden="true"></text>
+      <input class='input' placeholder="联系人地址" auto-focus />
+    </view>
+  </view>
+
+  <view class='duihuan' catchtap='exchange'>立即兑换</view>
+
+</view>

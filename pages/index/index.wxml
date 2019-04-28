@@ -1,0 +1,62 @@
+<view class='user'>
+  <view class='info' catchtap='toinfo'>
+    <view class='h'>
+      <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
+    </view>
+    <view class='name'>
+      <open-data class="open-data-userNickName line1" type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='right'>
+      <text class='fa fa-angle-right' aria-hidden="true"></text>
+    </view>
+  </view>
+  <view class='md'>
+    <view class='mdchlid mdl'>
+      <view class='mdtext'>总积分</view>
+      <text class='mdnum'>100000</text>
+    </view>
+    <view class='mdchlid mdc' bindtap='toGift'>
+      <view class='mdtext'>商品兑换</view>
+      <view class="gift">
+        <text class="fa fa-gift" aria-hidden="true"></text>
+      </view>
+    </view>
+    <view class='mdchlid mdr'>
+      <view class='mdtext'>今日获得</view>
+      <text class='mdnum'>+1000</text>
+    </view>
+
+  </view>
+</view>
+
+<view class='img'>
+  <image src='../../images/banner.jpg'></image>
+</view>
+<view class='title'>
+  <view class='titleL fa fa-line-chart' aria-hidden="true"> 竞猜直通车</view>
+  <view class='titleR'> 最近使用</view>
+</view>
+
+<view class='list'>
+  <swiper indicator-dots="{{true}}" autoplay="{{false}}" previous-margin="{{'40rpx'}}" next-margin="{{'40rpx'}}" bindchange="swiperChange" indicator-color='#f3d7b5' indicator-active-color='#ff4c00'>
+    <block wx:for="{{dataVal}}" wx:key="{{index}}" wx:for-item='item'>
+      <swiper-item>
+        <view style='background-color:{{pageBackgroundColor[index].bgc}};color:{{pageBackgroundColor[index].color}}' class="cards slide-image {{swiperIndex == index ? 'active' : ''}}">
+          <shares sharesV='{{item}}'></shares>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='title'>
+  <view class='titleL fa fa-fire' aria-hidden="true"> 热门排行榜</view>
+  <view class='titleR'> 更多
+    <text class='fa fa-angle-right' aria-hidden="true"></text> </view>
+</view>
+
+<block wx:for="{{dataVal}}" wx:key="{{index}}" wx:for-item='item'>
+  <view class='cardHot'>
+
+  </view>
+</block>

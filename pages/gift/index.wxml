@@ -1,0 +1,15 @@
+<view class='box'>
+  <block wx:for="{{10}}" wx:key="{{index}}" wx:for-item='item'>
+    <view class='chlid' catchtap='toinfo' data-id='1'>
+      <view class='img'>
+        <image src='../../images/lip.jpg'></image>
+      </view>
+      <view class='title'>会议小礼品活动赠品</view>
+      <view class='num'>兑换次数<text class='number'>123</text> 次</view>
+      <view class='integral'>
+        <view class='jf'><text class='number'>3000</text> 积分</view>
+        <button class='dh'>兑换</button>
+      </view>
+    </view>
+  </block>
+</view>

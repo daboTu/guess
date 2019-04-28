@@ -1,0 +1,11 @@
+<view>
+  <view class='Cardsbox'>
+    <view class='lbox'>
+      <text class='fa {{sharesV.icon}}' aria-hidden="true"></text>
+      <text> {{sharesV.title}}</text>
+    </view>
+    <view class='rbox fa fa-angle-right' aria-hidden="true"></view>
+  </view>
+  <view class='titmess'>猜涨跌赢积分，兑换精美礼品</view>
+  <view class='num'>当前已经有123456用户参与了该活动</view>
+</view>
