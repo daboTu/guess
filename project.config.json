@@ -12,6 +12,8 @@
 	"appid": "wx04c71527e76ce300",
 	"projectname": "stopCar",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -30,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -71,6 +73,20 @@
 					"id": -1,
 					"name": "我的账单",
 					"pathName": "pages/bill/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "竞猜界面",
+					"pathName": "pages/competition/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "列表",
+					"pathName": "pages/competitionlist/index",
 					"scene": null
 				}
 			]

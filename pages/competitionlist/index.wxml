@@ -1,0 +1,3 @@
+<block wx:for="{{dataVal}}" wx:key="{{index}}" wx:for-item='item'>
+ <modular sharesV='{{item}}' catchtap='listtoinfo'></modular>
+</block>

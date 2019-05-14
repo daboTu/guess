@@ -19,6 +19,9 @@ let $ajax = function(obj) {
   // data.Token = md5(md5('meihua_shenting') + parseInt((new Date().getTime()) / 1000) + md5('xiaoyYdS'));
   // data.Time = parseInt((new Date().getTime()) / 1000);
   return new Promise((resolve, reject) => {
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: urlPublic + url,
       data: data,
@@ -28,9 +31,16 @@ let $ajax = function(obj) {
       },
       success: function(res) {
         resolve(res.data)
+        wx.hideLoading()
       },
       fail: function(err) {
         console.warn('网络请求失败')
+        wx.showToast({
+          title: '网络请求失败',
+          image:'../../images/error.png',
+          duration: 2000
+        })
+        wx.hideLoading()
         reject(err)
       }
     })

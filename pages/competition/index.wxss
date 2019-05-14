@@ -1,0 +1,326 @@
+.bsox {
+  height: 730rpx;
+  background: #f6a69f;
+}
+
+.ttcai {
+  padding-top: 20rpx;
+  text-align: center;
+}
+
+.ttcai image {
+  width: 626rpx;
+  height: 58rpx;
+}
+
+.num {
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  margin: 24rpx 0 0;
+}
+
+.boxStyle {
+  display: inline-block;
+  width: 40rpx;
+  height: 50rpx;
+  margin: 0 6rpx;
+  box-shadow: 0px 0px 3px #bbe8ff;
+  vertical-align: middle;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #fff;
+  /* color: #f36838 */
+}
+
+.tishi {
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.texttishi {
+  font-size: 24rpx;
+  color: #fff;
+  margin: 0 24rpx;
+}
+
+.xian {
+  display: inline-block;
+  width: 100rpx;
+  height: 1px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+/* 弹幕 */
+
+.danmu {
+  height: 350rpx;
+  position: relative;
+}
+
+/* 按钮这里 */
+
+.butt {
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+.gift, .rule {
+  width: 100rpx;
+  padding-top: 12rpx;
+  height: 88rpx;
+  box-shadow: 0px 0px 3px #fff;
+  border-radius: 50%;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  /* background-color: #fff; */
+}
+
+.icon {
+  font-size: 40rpx;
+  display: block;
+}
+
+.time {
+  flex: 1;
+  margin: 0 24rpx;
+  display: flex;
+  background-color: #fff;
+  border-radius: 300rpx;
+  padding: 0 24rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #666;
+}
+
+.mess {
+  line-height: 80rpx;
+}
+
+.time .input {
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 12rpx;
+  height: 100%;
+}
+
+/* 操作区 */
+
+.caozuo {
+  padding-top: 24rpx;
+  padding-bottom: 48rpx;
+  margin: -30rpx 0 0;
+  background-color: #f8f8f8;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  /* box-shadow: 0px 1px 3px #f7f7f7; */
+}
+
+.caozuotie {
+  font-size: 28rpx;
+  color: #444;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.indo {
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  /* background-color: #f6a69f; *//* box-shadow: inset 0px 1px 3px #f36838; */
+  width: 500rpx;
+  margin: 20rpx auto 0;
+  padding: 5rpx 0;
+  /* border-radius: 60rpx; */
+}
+
+.indo .zhhu {
+  color: #409eff;
+  font-weight: 600;
+}
+
+.cardBox {
+  padding: 5rpx 24rpx 10rpx;
+  margin: 20rpx 30rpx 0;
+  min-height: 200rpx;
+  box-shadow: inset 0px 1px 3px #f36838;
+  background: #f6a69f;
+  border-radius: 20rpx;
+}
+
+.cardChliBox {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 140rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin: 0 12rpx 20rpx;
+  background-color: #000;
+}
+/* 弹出 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Popup {
+  width: 600rpx;
+  position: fixed;
+  left: 50%;
+  z-index: 9;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30rpx;
+  /* overflow: hidden; */
+}
+.yuan{
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  line-height: 150rpx;
+  text-align: center;
+  margin: -75rpx auto 0;
+  background: #eee;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.top{
+  width: 100%;
+  background: #f36838;
+  padding-bottom: 40rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.titleTime{
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  padding-top: 90rpx;
+}
+.jifen{
+  font-size: 28rpx;
+  margin: 0 40rpx;
+  text-align: center;
+  padding-bottom:24rpx;
+  color: #fff;
+  position: relative;
+}
+.jifen::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  bottom:0;
+  background: #fff;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.inputbox{
+  padding: 0 40rpx;
+}
+.tit{
+  margin: 12rpx 0 8rpx; 
+  font-size: 28rpx;
+  color: #f7f7f7;
+  line-height: 60rpx;
+}
+.inputContent{
+  color: #fff;
+  padding: 12rpx ;
+  font-size: 30rpx;
+  position: relative;
+  margin-bottom: 24rpx;
+}
+.inputContent:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  bottom:-80rpx;
+  border:1px solid #fff;
+  border-radius:20rpx;
+  width: 100%;
+  height: 160rpx;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.place-holder{
+  color: #fff;
+}
+.tishi2{
+  font-size: 28rpx;
+  color: #fff;
+}
+.jif{
+  color: #409eff;
+}
+.bott{
+  background-color:#fff;
+  padding: 50rpx 24rpx; 
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.yes{
+  text-align: center;
+  width: 60%;
+  background-color: #f6a69f;
+  color: #fff;
+  line-height: 80rpx;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
+.close{
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+}
+/* 弹幕 */
+/**index.wxss**/
+
+.button{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.aon{
+position: absolute;
+white-space:nowrap;/* 防止向下换行*/
+}
+.doommview{
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  /* position: absolute; */
+}
+/**定义从右边向左边的移动的动画**/
+@keyframes first{
+  from{left: 100%; }
+  to{left: -100%;}
+}

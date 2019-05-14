@@ -1,19 +1,25 @@
 <view class='user'>
-  <view class='info' catchtap='toinfo'>
-    <view class='h'>
+  <view class='info'>
+    <view class='h'  catchtap='toinfo'>
       <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
     </view>
-    <view class='name'>
+    <view class='name' catchtap='toinfo'>
       <open-data class="open-data-userNickName line1" type="userNickName" lang="zh_CN"></open-data>
     </view>
-    <view class='right'>
+    <view class='right' catchtap='toinfo'>
       <text class='fa fa-angle-right' aria-hidden="true"></text>
+    </view>
+    <view class='signBut' wx:if='{{userinfo.sign==0}}'  catchtap='signInFun' data-c='2'>
+      <text class="fa fa-pencil-square-o" aria-hidden="true"></text> 签到
+    </view>
+    <view class='signBut isyes' wx:if='{{userinfo.sign==1}}'>
+      <text class="fa fa-pencil-square-o" aria-hidden="true"></text> 已签到
     </view>
   </view>
   <view class='md'>
     <view class='mdchlid mdl'>
       <view class='mdtext'>总积分</view>
-      <text class='mdnum'>100000</text>
+      <text class='mdnum'>{{userinfo.userPo.integral}}</text>
     </view>
     <view class='mdchlid mdc' bindtap='toGift'>
       <view class='mdtext'>商品兑换</view>
@@ -22,8 +28,8 @@
       </view>
     </view>
     <view class='mdchlid mdr'>
-      <view class='mdtext'>今日获得</view>
-      <text class='mdnum'>+1000</text>
+      <view class='mdtext'>昨日获得</view>
+      <text class='mdnum'>{{userinfo.yAdd}}</text>
     </view>
 
   </view>
@@ -56,7 +62,21 @@
 </view>
 
 <block wx:for="{{dataVal}}" wx:key="{{index}}" wx:for-item='item'>
-  <view class='cardHot'>
-
-  </view>
+ <modular sharesV='{{item}}' catchtap='listtoinfo'></modular>
 </block>
+
+<!-- 签到 -->
+<view class='mask'  wx:if='{{userinfo.sign==0}}'></view>
+<view class='Popup' wx:if='{{userinfo.sign==0}}'>
+  <view class='SignTop'>
+    <view class='SignNum'>已连续签到 <text>{{userinfo.signCount}}</text> 天</view>
+    <view class='imgSign'><image src='../../images/sign.png'></image></view>
+  </view>
+  <view class='SignBottom'>
+    <view class='addI'>今日签到可获得 <text> +{{userinfo.signCount+1}} </text>积分</view>
+    <view class='addI as'>【连续签到，获得更多积分哦~】</view>
+    <view class='SignBut'  catchtap='signInFun' data-c='0'>立即签到</view>
+  </view>
+</view>
+<view  wx:if='{{userinfo.sign==0}}' catchtap='signInFun' data-c='1' class="Close fa fa-times" aria-hidden="true"></view>
+<i-toast id="toast" />

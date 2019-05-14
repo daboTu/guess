@@ -1,8 +1,11 @@
 //index.js
 //获取应用实例
+
 const app = getApp()
 Page({
   data: {
+    userinfo: {},
+    isSignIn: false,
     dataVal: [{
         title: '股票猜涨跌',
         icon: 'fa-area-chart'
@@ -68,7 +71,10 @@ Page({
     ]
   },
   onShow: function() {
-
+    // wx.$Toast({
+    //   content: '成功的提示',
+    //   type: 'success'
+    // })
   },
   swiperChange(e) {
     this.setData({
@@ -78,10 +84,31 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-
+  onShareAppMessage: function(res) {
+    wx.$ajax.share({}).then((res) => {
+      if (res.code == 0) {
+        wx.showToast({
+          title: res.message,
+          image: '../../images/error.png',
+          duration: 2000
+        })
+        let item2 = 'userinfo.userPo.integral'
+        this.setData({
+          [item2]: res.data
+        })
+      } else {
+        wx.showToast({
+          title: res.message,
+          image: '../../images/error.png',
+          duration: 2000
+        })
+      }
+    })
   },
   onLoad: function(options) {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     // 获取用户信息
     wx.getSetting({ //查询是否授权登录过
       success: scope => {
@@ -95,7 +122,10 @@ Page({
                 }).then((res) => {
                   console.log(res, 11111)
                   if (res.code == 0) {
-                    wx.setStorageSync('id', res.data.id)
+                    wx.setStorageSync('id', res.data.userPo.id)
+                    this.setData({
+                      userinfo: res.data
+                    })
                     // try {
                     //   const value = wx.getStorageSync('id')
                     //   if (value) {
@@ -118,6 +148,9 @@ Page({
                           sex: info.gender
                         }).then((res) => {
                           wx.setStorageSync('id', res.data.id)
+                          this.setData({
+                            userinfo: res.data
+                          })
                         })
                       }
                     })
@@ -139,9 +172,45 @@ Page({
       url: '/pages/gift/index'
     })
   },
-  toinfo(){
+  toinfo() {
     wx.navigateTo({
       url: '/pages/userinfo/index',
     })
+  },
+  listtoinfo(){
+    wx.navigateTo({
+      url: '/pages/competition/index',
+    })
+  },
+  // 签到 和 关闭
+  signInFun(e) {
+    let item = 'userinfo.sign'
+    if (e.currentTarget.dataset.c == 0) {
+      wx.$ajax.sign({}).then((res) => {
+        console.log(res)
+        if (res.code == 0) {
+          wx.showToast({
+            title: res.message,
+            duration: 2000
+          })
+          let item2 = 'userinfo.userPo.integral'
+          this.setData({
+            [item]: 1,
+            [item2]: res.data
+          })
+        } else {}
+      })
+    } else if (e.currentTarget.dataset.c == 1) {
+      // 弹出签到
+      this.setData({
+        [item]: 0,
+      })
+    } else if (e.currentTarget.dataset.c == 2) {
+      // 直接关闭
+      this.setData({
+        [item]: 1,
+      })
+    }
+
   }
 })

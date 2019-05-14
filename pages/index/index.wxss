@@ -1,79 +1,111 @@
 /* 用户信息部分 */
-page{
-  background-color:#fff; 
+
+page {
+  background-color: #fff;
 }
-.user{
+
+.user {
   background-color: #f6a69f;
   border-bottom-left-radius: 20rpx;
   border-bottom-right-radius: 20rpx;
   padding: 24rpx;
 }
-.info{
+
+/* 签到按钮 */
+
+.signBut {
+  height: 65rpx;
+  padding: 0 34rpx;
+  background: #f36838;
+  margin-left: 50rpx;
+  border-radius:100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 12rpx;
+  line-height: 65rpx;
+}
+.isyes{
+  background: #db8f76;
+}
+
+.info {
   display: flex;
   color: #fff;
 }
-.h{
+
+.h {
   width: 90rpx;
   border-radius: 10rpx;
   overflow: hidden;
   background-color: #fff;
   padding: 5rpx;
-  height:90rpx;
+  height: 90rpx;
 }
-.user .right{
+
+.user .right {
   line-height: 90rpx;
 }
-.name{
+
+.name {
   flex: 1;
   line-height: 90rpx;
   padding-left: 24rpx;
   font-size: 30rpx;
 }
-.md{
+
+.md {
   display: flex;
-  padding-top:40rpx; 
+  padding-top: 40rpx;
   color: #fff;
 }
-.mdchlid{
+
+.mdchlid {
   flex: 1;
 }
-.mdr{
+
+.mdr {
   text-align: right;
 }
-.mdc{
+
+.mdc {
   text-align: center;
 }
-.mdnum{
+
+.mdnum {
   font-size: 50rpx;
   padding-top: 30rpx;
   font-weight: 600;
 }
-.mdtext{
+
+.mdtext {
   margin-bottom: 12rpx;
   font-size: 28rpx;
 }
-.gift{
+
+.gift {
   font-size: 50rpx;
 }
 
-
 /* banner */
+
 .img {
   width: 100%;
   height: 189rpx;
   margin: 0 auto 0;
 }
 
-.title{
+.title {
   display: flex;
   padding: 0 24rpx;
   font-size: 28rpx;
   color: #000;
 }
-.titleL{
-  flex: 1
+
+.titleL {
+  flex: 1;
 }
-.titleR{
+
+.titleR {
   flex: 1;
   color: #9e9e9e;
   text-align: right;
@@ -124,11 +156,103 @@ page{
 }
 
 /* 热门排行榜 */
-.cardHot{
+
+.cardHot {
   margin: 24rpx 24rpx;
   height: 300rpx;
   background: #e0f0e9;
   border-radius: 10rpx;
   overflow: hidden;
   box-shadow: -0px 3px 8px 0px #f8f8f8;
+}
+
+/* 弹出窗 签到 */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Popup {
+  width: 600rpx;
+  height: 700rpx;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.SignTop {
+  width: 100%;
+  height: 300rpx;
+  background-color: #fdefc6;
+}
+
+.SignNum {
+  font-size: 38rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #666;
+  padding-top: 20rpx;
+}
+
+.SignNum text {
+  color: #f6a69f;
+  font-weight: 600;
+}
+
+.SignBut {
+  width: 60%;
+  line-height: 90rpx;
+  background-color: #f6a69f;
+  color: #fff;
+  font-size: 30rpx;
+  margin: 0 auto;
+  margin-top: 32rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+.addI {
+  line-height: 60rpx;
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+}
+
+.addI text {
+  color: #f6a69f;
+  font-size: 60rpx;
+  font-weight: 600;
+}
+
+.imgSign {
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.imgSign image {
+  width: 518rpx;
+  height: 230rpx;
+}
+
+.SignBottom {
+  padding-top: 90rpx;
+}
+
+.Close {
+  position: fixed;
+  bottom: 160rpx;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 60rpx;
+  height: 60rpx;
 }

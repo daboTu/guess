@@ -31,17 +31,55 @@ const giftInfo = (data) => {
     data
   })
 }
+// 兑换
 const giftorder = (data) => {
-return request({
-  url: '/gift/giftOrder',
-  method: 'p0st',
-  data
-})
+  return request({
+    url: '/gift/giftOrder',
+    method: 'post',
+    data
+  })
+}
+// 兑换记录
+const myGiftOrder = (data) => {
+  return request({
+    url: '/user/myGiftOrder',
+    method: 'post',
+    data
+  })
+}
+// 积分记录
+const integralNotes = (data) => {
+  return request({
+    url: '/user/integralNotes',
+    method: 'post',
+    data
+  })
+}
+// 签到
+const sign = (data) => {
+  return request({
+    url: '/user/sign',
+    method: 'post',
+    data
+  })
+}
+// 分享
+const share = (data) => {
+  return request({
+    url: '/user/share',
+    method: 'post',
+    data
+  })
 }
 
 export default {
   login,
   register,
   giftList,
+  giftorder,
+  myGiftOrder,
+  integralNotes,
+  sign,
+  share,
   giftInfo
 }

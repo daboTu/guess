@@ -6,15 +6,20 @@
     "pages/giftinfo/index",
     "pages/userinfo/index",
     "pages/exchange/index",
-    "pages/bill/index"
+    "pages/bill/index",
+    "pages/competition/index",
+    "pages/competitionlist/index"
   ],
   "usingComponents": {
-    "shares": "pages/index/shares/index"
+    "shares": "pages/index/shares/index",
+    "i-toast": "components/toast/index",
+    "modular": "components/Modular/index"
   },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f6a69f",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

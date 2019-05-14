@@ -1,0 +1,83 @@
+<view class='bsox'>
+  <view class='ttcai'>
+    <image src='../../images/j1.png'></image>
+  </view>
+  <view class='num'>
+    当前有
+    <block wx:for="{{num}}" wx:key="{{index}}" wx:for-item='item'>
+      <text class='boxStyle'>{{item}}</text>
+    </block>
+    人参加
+  </view>
+  <view class='tishi'>
+    <text class='xian'></text>
+    <text class='texttishi'>结束后可获得对应积分</text>
+    <text class='xian'></text>
+  </view>
+
+  <!-- 弹幕 -->
+  <view class='danmu'>
+    <view class="doommview">
+    <block wx:for="{{doommData}}" wx:key="id">
+        <text wx:if="{{item.display}}" class="aon" style="animation: first {{item.time}}s linear forwards;top:{{item.top}}%;color:{{item.color}};">
+            {{item.text}}
+        </text>
+    </block>
+</view>  
+  </view>
+  <view class='butt'>
+    <view class='gift'>
+      <view class="icon fa fa-gift" aria-hidden="true"></view>
+      礼品
+    </view>
+    <view class='time'>
+      <text class="mess fa fa-comments-o" aria-hidden="true"></text>
+      <input class='input' placeholder="说两句..." confirm-type='send' />
+    </view>
+    <view class='rule'>
+      <view class="icon fa fa-exclamation-triangle" aria-hidden="true"></view>
+      规则
+    </view>
+  </view>
+</view>
+<!-- 操作步骤 -->
+<view class='caozuo'>
+  <view class='caozuotie'>您还没有下注哦~</view>
+  <view class='caozuotie'>截至下一场交易时间 13:00</view>
+  <view class='cardBox'>
+    <view class='indo'>
+      5月10日 上证指数
+      <text class='zhhu'>2975.92</text>
+    </view>
+    
+    <view class='cardChliBox'>
+      <view class='card' catchtap='alert'></view>
+      <view class='card' catchtap='alert'></view>
+      <view class='card' catchtap='alert'></view>
+      <view class='card' catchtap='alert'></view>
+      <view class='card' catchtap='alert'></view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 押注 -->
+<view class='mask' wx:if='{{alerty}}'></view>
+<view class='Popup' wx:if='{{alerty}}'>
+  <view class='yuan'>看涨</view>
+  <view class='top'>
+    <view class='titleTime'>竞猜5月10号某某项目</view>
+    <view class='jifen'>当前账户积分：5000</view>
+    <view class='inputbox'>
+      <view class='tit'>填写押注的积分</view>
+      <view class='inputContent'>
+        <input class='input' placeholder-class="place-holder" placeholder="填写积分"/>
+      </view>
+      <view class='tishi2'>猜对预计获得 <text class='jif'> 120积分 </text>(猜胜+2,连胜+1)</view>
+    </view>
+  </view>
+  <view class='bott'>
+    <view class='yes'>确定</view>
+  </view>
+  <view catchtap='close' class='close fa fa-times' aria-hidden="true"></view>
+</view>

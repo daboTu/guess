@@ -1,22 +1,34 @@
-// pages/gift/index.wxml.js
+// pages/competitionlist/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+    dataVal: [{
+        title: '股票猜涨跌',
+        icon: 'fa-area-chart'
+      },
+      {
+        title: '数字竞猜',
+        icon: 'fa-bell'
+      },
+      {
+        title: '股票猜涨跌',
+        icon: 'fa-area-chart'
+      },
+      {
+        title: '股票猜涨跌',
+        icon: 'fa-area-chart'
+      }
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.$ajax.giftList().then(r => {
-      this.setData({
-        list: r.data.giftPoList
-      }) 
-    })
+
   },
 
   /**
@@ -60,16 +72,15 @@ Page({
   onReachBottom: function() {
 
   },
-
+  listtoinfo() {
+    wx.navigateTo({
+      url: '/pages/competition/index',
+    })
+  },
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
 
-  },
-  toinfo(e) {
-    wx.navigateTo({
-      url: '/pages/giftinfo/index?id=' + e.currentTarget.dataset.id
-    })
   }
 })

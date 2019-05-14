@@ -1,0 +1,41 @@
+/* pages/index/Modular/index.wxss */
+.modular{
+  /* height: 330rpx; */
+  background-color: #daf9ca;
+  box-shadow: -0px 3px 8px 0px #ecdddd;
+  border-radius: 20rpx;
+  padding-bottom:10rpx;
+  margin: 24rpx 24rpx 48rpx;
+}
+.Cardsbox{
+  font-size: 28rpx;
+  padding: 24rpx 24rpx;
+  display: flex;
+}
+.Cardsbox .lbox{
+  flex: 1
+}
+.Cardsbox .rbox{
+  flex: 1;
+  text-align: right;
+}
+.titmess{
+  padding: 12rpx 24rpx;
+  font-size: 32rpx;
+}
+.num{
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}
+.toclid{
+  margin: 48rpx 24rpx 24rpx;
+  font-size: 28rpx;
+}
+.toclid .but{
+  display: inline-block;
+  line-height: 60rpx;
+  background-color: #f36838;
+  color: #fff;
+  padding: 0 60rpx;
+  border-radius: 100rpx;
+}
